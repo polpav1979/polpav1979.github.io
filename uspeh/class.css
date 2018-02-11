@@ -159,7 +159,7 @@ header{
     height: 750px;
     display: flex;
     justify-content: center;
-    background-image: url("/images/fon2.jpg");
+    background-image: url("/images/background02.jpg");
 }
 .who-me_content{
     width: 1100px;
@@ -197,7 +197,7 @@ header{
     padding: 200px 0;
     display: flex;
     justify-content: center;
-    background-image: url("/images/fon3.jpg");
+    background-image: url("/images/background03.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -317,7 +317,7 @@ figure.effect-ming figcaption::before {
 .price{
     display: flex;
     justify-content: center;
-    background-image: url("/images/fon4.png");
+    background-image: url("/images/background04.png");
 }
 .price_main{
     width: 1100px;
