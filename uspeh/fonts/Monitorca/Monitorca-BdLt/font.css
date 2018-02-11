@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Monitorca-BdIt';
+  src: url('Monitorca-BdIt.eot');
+  src: url('Monitorca-BdIt.woff2') format('woff2'),
+       url('Monitorca-BdIt.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monitorca-BoldItalic';
+  src: url('Monitorca-BoldItalic.woff') format('woff'),
+       url('Monitorca-BoldItalic.ttf') format('truetype'),
+       url('Monitorca-BoldItalic.svg#Monitorca-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'kurbanistika';
+  src: url('kurbanistika.eot');
+  src: url('kurbanistika.woff2') format('woff2'),
+       url('kurbanistika.woff') format('woff'),
+       url('kurbanistika.ttf') format('truetype'),
+       url('kurbanistika.svg#kurbanistika') format('svg'),
+       url('kurbanistika.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'Monitorca-Bd';
+    src: url('fonts/Monitorca/Monitorca-Bd/Monitorca-Bd.eot');
+    src: url('fonts/Monitorca/Monitorca-Bd/Monitorca-Bd.woff2') format('woff2'),
+        url('fonts/Monitorca/Monitorca-Bd/Monitorca-Bd.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Monitorca';
+    src: url('\fonts\Monitorca\Monitorca-Rg\Monitorca-Rg.eot');
+    src: url('\fonts\Monitorca\Monitorca-Rg\Monitorca-Rg.woff2') format('woff2'),
+        url('\fonts\Monitorca\Monitorca-Rg\Monitorca-Rg.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #ffffff;
+    color: #3d3d3d;
+    font-family: 'Monitorca';
+}
+
+body, p, h1, h2, h3, h4, figure, figcaption, main, nav, div, a{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a, a[href]{
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+/*Меню*/
+nav{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(204,204,204,0.95);
+    box-shadow: 0px 2px 20px #4a4a4a;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+}
+.menu_header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+.menu_left{
+    width: 235px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 65px;
+    font-size: 26px;
+}
+.menu_right{
+    width: 465px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 65px 0 0;
+    padding: 0;
+    color: #3d3d3d;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*появляющийся логотип в меню*/
+.menu_logo{
+    display: flex;
+    align-self: center;
+}
+.menu_logo_hidden{
+    display: none;
+}
+
+/*подчеркивание ссылки при наведении*/
+.menu_right a[href] {
+    position: relative;
+    padding: 0 0 5px 0;
+}
+.menu_right a[href]:after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    background-color: #ff0000;
+    -webkit-transition: all .1s ease;
+    transition: all 0.3s ease;  
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+}
+.menu_right a[href]:hover:after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.menu_right a[href].active {
+    color: #ff0000;
+}
+
+/**/
+.menu_right:hover,
+.menu_right a.active {
+    color: #ff0000;
+}
+
+
+/*Хедер*/
+header{
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_img img{
+    max-width: 100%;
+    height: auto;
+    align-self: flex-end;
+    padding-left: 65px;
+}
+.header_logo{
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 60px;
+}
+.logo_main_text_up{
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+.logo_main_text_down{
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+/*Кто мы*/
+.who-me{
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    background-image: url("/images/fon2.png");
+}
+.who-me_content{
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-top: 90px;
+}
+.who-me_content__item{
+    height: 275px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.who-me_content__item___text,
+.who-me_content__item___img{
+    width: 275px;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.who-me_content__item___text{
+    background-color: rgba(165, 163, 161, 0.8);
+    color:#3d3d3d;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+
+/*Услуги*/
+.services{
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    background-image: url("/images/fon3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.grid_contener{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255,255,255,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+/* Common style */
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+}
+figcaption{
+    letter-spacing: 1px;
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 100;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.grid figure p{
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 50%;
+}
+.grid_contener h2{
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+/*эффекты наведения на слайдер*/
+figure.effect-ming {
+    background: #030c17;
+    display: flex;
+}
+figure.effect-ming img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+figure.effect-ming p{
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+figure.effect-ming:hover figcaption::before,
+figure.effect-ming:hover p{
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+figure.effect-ming:hover figcaption {
+    background-color: rgba(58,52,42,0);
+}
+figure.effect-ming:hover img {
+    opacity: 0.4;
+}
+figure.effect-ming figcaption::before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.4,1.4,1);
+    transform: scale3d(1.4,1.4,1);
+}
+
+/*Slider*/
+
+
+
+/*Цена*/
+.price{
+    display: flex;
+    justify-content: center;
+    background-image: url("/images/fon4.png");
+}
+.price_main{
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 120px 0 120px;
+}
+.price_item{
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.price-button{
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #555555;
+    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.price-button:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    cursor: pointer;
+}
+.price-button.active{
+    background-color: #ffffff;
+    color: #ff0000;
+    cursor: pointer;
+    box-shadow: none;
+}
+.price-text{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    margin-bottom: 20px;
+}
+.price-text_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+.price-text-main,
+.price-text-dopservices{
+    display: flex;
+}
+.price-text-main{
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+.price-text-dopservices{
+    font-size: 18px;
+}
+.hidden{
+    display: none;
+}
+.price-text-dopservices__price,
+.price-text-main__price{
+    margin-left: 20px;
+}
+.price-text-main > p,
+.price-text-dopservices > p{
+    padding: 5px;
+}
+
+
+/*Где мы*/
+.contacts{
+    height: 750px;
+    display: flex;
+    justify-content: center;
+}
+.contacts_main{
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts_header__button{
+    width: 252px;
+    height: 43px;
+    background-color: #ff0000;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: 103px 0 70px;
+}
+.contacts_header__text p{
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+footer{
+    height: 150px;
+    background-color: rgb(204,204,204);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer_main{
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_left,
+.footer_center,
+.footer_right{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
